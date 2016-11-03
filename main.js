@@ -15,7 +15,11 @@ $(function() {
 	// Number of avatars the user can choose from. Can be changed to any number, depending on how many avatars you would like to display. Default: 82
 	// The avatar images used in the online preview of the paradigm were created using by pickaface.net and due to their terms not available for redistribution. You should therefore create your own images. All images should be 250x250 pixels in size and carry the names "avatar_NUMBER.png" (e.g. avatar_1.png; "png" should be lower case; the numbers in the names should be consequtive, starting from 1). The number of avatars dependeds on the corresponding parameter. The images should be placed in folder "avatars," located in the main study folder extracted on your computer or server.
 
-    settings.numberofavatars = 10;
+
+
+  // STEFFI: anzahl der avatare zum aussuchen für den user. sind die bilder die in avatars drin sind also in dem fall 
+  // habt ihr 8 bilder dh hier müsst ihr 8 nehmen, ausser ihr nehmt andere neue bilder für euch
+    settings.numberofavatars = 8;
 
 	
     // **Redirection**    
@@ -36,19 +40,29 @@ $(function() {
 	// In cases with only 1 "like," a second "like" is added with time point 9999999. This "like" is added for programming purposes and is never executed, as it is outside the task time
 
     // In condition 1, the participant will receive 1 like at the following timepoint (in ms). Default: [12000, 9999999]
-    settings.condition_1_likes = [12000, 9999999]; 
+    //settings.condition_1_likes = [12000, 9999999]; 
 
     // In condition 2, user will receive 6 likes at the following timepoints (in ms). Default: [10000, 15000,35000,80000,1320000,150000]
-    settings.condition_2_likes = [10000, 15000,35000,80000,1320000,150000];  
+    //settings.condition_2_likes = [10000, 15000,35000,80000,1320000,150000];  
     
     // In condition 3, user will receive 9 likes at the following timepoints (in ms). Default: [10000, 11000,15000,35000,80000,100000,110000,150000,20000]
-    settings.condition_3_likes = [10000, 11000,15000,35000,80000,100000,110000,150000,20000]; 
+    //settings.condition_3_likes = [10000, 11000,15000,35000,80000,100000,110000,150000,20000]; 
+
+  settings.condition_EXKULDIERT_KLEIN_likes = [28000, 99999999999]; // 1
+  settings.condition_INKLUDIERT_KLEIN_likes = [10000,83000,170000,]; // 3
+  settings.condition_EXKULDIERT_GROSS_likes = [85000, 99999999999]; // 1
+  settings.condition_INKLUDIERT_GROSS_likes = [10000,13000,15500,23000,37000,58000,77000,81000,101000,112000,156000,240000]; // 12
 
 	// **Others' likes**     
 	// To keep the total distribution of "likes" constant across conditions, The "likes" received by one group member can be adjusted according to the participant's. By default, the other group member receives 9 "likes" in the participant-ostracism condition, 5 in the participant-inclusion condtion, and 1 in the participant-overinclusion condtion.
-	settings.condition_1_adjusted_likes = [12000, 14000,15000,35000,80000,100000,110000,150000,20000]; // 9
-	settings.condition_2_adjusted_likes = [12000, 14000,15000,35000,80000]; // 5
-	settings.condition_3_adjusted_likes = [12000, 9999999]; //1	
+	settings.condition_EXKLUDIERT_GROSS_adjusted_likes = [12000, 14000,15000,35000,80000,100000,110000,150000,200000]; // 9
+  settings.condition_EXKLUDIERT_KLEIN_adjusted_likes = [12000, 14000,15000,35000,80000,100000,110000,150000,200000, 250000, 350000]; // 11
+  settings.condition_INKLUDIERT_GROSS_adjusted_likes = [12000, 14000,15000,35000,80000]; // 5
+	settings.condition_INKLUDIERT_KLEIN_adjusted_likes = [12000, 9999999]; //1	
+
+
+
+
 	
     // Usernames by which the participant will receive "likes"
 	// If group member names are changed, these should be changed accordingly.
@@ -63,6 +77,8 @@ $(function() {
   // **Slide:** **Intro**     
   // With instructions regarding the task. The intro container is shown, the continue calls the next slide when clicked.
   function init_intro() {
+    console.log("intro");
+
   	$('#intro').show();
   	$('#submit_intro').on('click',function() {
 			$('#intro').hide();
@@ -130,7 +146,7 @@ $(function() {
   			window.avatarexport = /avatar_([^\s]+)/.exec(window.avatar)[1];
     			init_text();  			
     		} else {
-    			alertify.log("Please select an avatar","error");
+    			alertify.log("Bitte w&auml;hlen Sie einen Avatar aus","error");
     		}
     	});
 
@@ -150,17 +166,17 @@ $(function() {
   		var error = 0;
   		if($('#description').val() == "") {
   			error = 1;
-  			errormsg = 'Please enter text';
+  			errormsg = 'Bitte f&uml;gen Sie einen Text ein';
   		}
   		if($('#description').val() !== "" && $('#description').val().length < 140) {
 		
   			error = 1;
-  			errormsg = 'Please write a bit more';
+  			errormsg = 'Bitte schreiben Sie ein bisschen mehr &uml;ber sich';
 			}
   		if($('#description').val().length > 401) {
   		
   			error = 1;
-  			errormsg = 'Please enter less text';
+  			errormsg = 'Bitte k&uml;rzen Sie Ihren Text ein wenig';
   		}  		
   		if(error == 0) {
   			$('#text').hide();
@@ -265,7 +281,7 @@ $(function() {
   		{ 
   			times[i] = +times[i]; 
   			
-  			themsg = usernames[i] + " liked your post";
+  			themsg = usernames[i] + " Gef&auml;llt dein Beitrag";
 
   			setTimeout(function(themsg) {
   				that.text(parseInt(that.text()) + 1);
@@ -331,6 +347,7 @@ $(function() {
   // Get URL parameters to set condition number and participant number
   function get_params() {
     // condition number must be 1, 2, or 3
+    debugger
     if(window.QueryString.c !== undefined && !isNaN(parseInt(window.QueryString.c)) && parseInt(window.QueryString.c) > 0 && parseInt(window.QueryString.c) < 4) {
       window.condition = parseInt(window.QueryString.c);
     } else {
@@ -363,19 +380,27 @@ $(function() {
 
     // the number of likes a person receives depends on the condition
 	// in addition, the number of likes another person receives is adjusted, so that there is the same number of likes overall
+
+  // TODO RANDOM
+  condition="EXKULDIERT_KLEIN";
+  
 	switch(condition) {
-		case 1:
-			window.settings.condition_likes = settings.condition_1_likes;
-			window.others.posts[1].likes = settings.condition_1_adjusted_likes;
+		case "EXKULDIERT_KLEIN":
+			window.settings.condition_likes = settings.condition_EXKULDIERT_KLEIN_likes;
+			window.others.posts[1].likes = settings.condition_EXKULDIERT_KLEIN_adjusted_likes;
 			break;
-		case 2:
-			window.settings.condition_likes = settings.condition_2_likes;
-			window.others.posts[1].likes = settings.condition_2_adjusted_likes;
+		case "EXKULDIERT_GROSS":
+			window.settings.condition_likes = settings.condition_EXKULDIERT_GROSS_likes;
+			window.others.posts[1].likes = settings.condition_EXKULDIERT_GROSS_adjusted_likes;
 			break;
-		case 3:
-			window.settings.condition_likes = settings.condition_3_likes;
-			window.others.posts[1].likes = settings.condition_3_adjusted_likes;
+		case "INCLUDIERT_KLEIN":
+			window.settings.condition_likes = settings.condition_INCLUDIERT_KLEIN_likes;
+			window.others.posts[1].likes = settings.condition_INCLUDIERT_KLEIN_adjusted_likes;
 			break;
+    case "INCLUDIERT_GROSS":
+      window.settings.condition_likes = settings.condition_INCLUDIERT_GROSS_likes;
+      window.others.posts[1].likes = settings.condition_INCLUDIERT_GROSS_adjusted_likes;
+      break;
 	}	
 	  
   }
@@ -479,3 +504,4 @@ $(function() {
   init_intro();
 
 });
+

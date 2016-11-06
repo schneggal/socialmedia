@@ -28,7 +28,6 @@ $(function() {
 	// To the redirect link, the following information will be appended: (1) participant number, (2) condition, (3) username, (4) description submitted by participant. These variables can be extracted from the link, saved as data, and used for linking the Social Media Ostracism paradigm to subsequent tasks and measures. See documentation for more details.
 
     settings.defaultredirect = 'http://fppvu.qualtrics.com/SE/?SID=SV_a9u9MdnpIRuxctT';
-
 	
 	// **Tasklength**     
     // Length of the group introduction task in milliseconds. Can be changed to any number (in ms). Default: 180000 (3min) 
@@ -48,6 +47,9 @@ $(function() {
     // In condition 3, user will receive 9 likes at the following timepoints (in ms). Default: [10000, 11000,15000,35000,80000,100000,110000,150000,20000]
     //settings.condition_3_likes = [10000, 11000,15000,35000,80000,100000,110000,150000,20000]; 
 
+  //steffi hier stellst du ein wann der user ein like bekommt
+  // settings.likes_by müsst ihr erweitern wenn die namen nied ausreichen bzw müsst ihr schaun dass die 
+  // namen die ihr da aufpoppen lasst ja auch dann vorkommen in euren test usern
   settings.condition_EXKULDIERT_KLEIN_likes = [28000, 99999999999]; // 1
   settings.condition_INKLUDIERT_KLEIN_likes = [10000,83000,170000,]; // 3
   settings.condition_EXKULDIERT_GROSS_likes = [85000, 99999999999]; // 1
@@ -55,7 +57,8 @@ $(function() {
 
 	// **Others' likes**     
 	// To keep the total distribution of "likes" constant across conditions, The "likes" received by one group member can be adjusted according to the participant's. By default, the other group member receives 9 "likes" in the participant-ostracism condition, 5 in the participant-inclusion condtion, and 1 in the participant-overinclusion condtion.
-	settings.condition_EXKLUDIERT_GROSS_adjusted_likes = [12000, 14000,15000,35000,80000,100000,110000,150000,200000]; // 9
+	
+  settings.condition_EXKLUDIERT_GROSS_adjusted_likes = [12000, 14000,15000,35000,80000,100000,110000,150000,200000]; // 9
   settings.condition_EXKLUDIERT_KLEIN_adjusted_likes = [12000, 14000,15000,35000,80000,100000,110000,150000,200000, 250000, 350000]; // 11
   settings.condition_INKLUDIERT_GROSS_adjusted_likes = [12000, 14000,15000,35000,80000]; // 5
 	settings.condition_INKLUDIERT_KLEIN_adjusted_likes = [12000, 9999999]; //1	
@@ -66,6 +69,7 @@ $(function() {
 	
     // Usernames by which the participant will receive "likes"
 	// If group member names are changed, these should be changed accordingly.
+  // STEFFI: wir können diese liste auch anpassen dass für jede gruppe andere namen snd - würd aber eher sagen ihr schaut dass ihr immer die gleichen test user überall habt und ergänzt nur mehr dann hamma weniger zum anpassen
     settings.likes_by = ['John','AncaD','Sarah','Arjen','Jane','George','Dan','Heather','Ky']; 
   }
   
@@ -211,7 +215,7 @@ $(function() {
   	setTimeout(function() {
   		$('#msg_all_done').show();
   		$("#loader").hide();
-  	}, 8000);
+  	}, 80);
 	
   	$('#submit_fb_login').on('click',function() {
 			$('#fb_login').hide();
@@ -251,8 +255,11 @@ $(function() {
 	  $("#task").append(html);
 	  
     // Add other boxes to slide    
-	  var tpl = $('#otherstmp').html(),html = Mustache.to_html(tpl, others);
+    adjust_to_condition();
+	  
+    var tpl = $('#otherstmp').html(),html = Mustache.to_html(tpl, window.others);
 	  $("#task").append(html);
+    debugger;
  
     // Randomize order of other players boxes
     function reorder() {
@@ -347,7 +354,7 @@ $(function() {
   // Get URL parameters to set condition number and participant number
   function get_params() {
     // condition number must be 1, 2, or 3
-    debugger
+    
     if(window.QueryString.c !== undefined && !isNaN(parseInt(window.QueryString.c)) && parseInt(window.QueryString.c) > 0 && parseInt(window.QueryString.c) < 4) {
       window.condition = parseInt(window.QueryString.c);
     } else {
@@ -381,25 +388,38 @@ $(function() {
     // the number of likes a person receives depends on the condition
 	// in addition, the number of likes another person receives is adjusted, so that there is the same number of likes overall
 
-  // TODO RANDOM
-  condition="EXKULDIERT_KLEIN";
-  
+  //TODO RANDOMIZE
+  // steffi hier kannst du dir die test gruppe so einschalten wie du es gerade ausprobieren willst und anpassen möchtest
+  condition="EXKLUDIERT_KLEIN";
+  //condition="EXKLUDIERT_GROSS";
+  //condition="INKLUDIERT_KLEIN";
+  //condition="INKLUDIERT_GROSS";
+
+
 	switch(condition) {
-		case "EXKULDIERT_KLEIN":
-			window.settings.condition_likes = settings.condition_EXKULDIERT_KLEIN_likes;
-			window.others.posts[1].likes = settings.condition_EXKULDIERT_KLEIN_adjusted_likes;
+		case "EXKLUDIERT_KLEIN":
+			window.settings.condition_likes = settings.condition_EXKLUDIERT_KLEIN_likes;
+			window.others = window.others_EXKULDIERT_KLEIN;
+      window.others.posts[1].likes = settings.condition_EXKLUDIERT_KLEIN_adjusted_likes;
+      settings.group_size = 5;
 			break;
-		case "EXKULDIERT_GROSS":
-			window.settings.condition_likes = settings.condition_EXKULDIERT_GROSS_likes;
-			window.others.posts[1].likes = settings.condition_EXKULDIERT_GROSS_adjusted_likes;
+		case "EXKLUDIERT_GROSS":
+			window.settings.condition_likes = settings.condition_EXKLUDIERT_GROSS_likes;
+      window.others = window.others_EXKULDIERT_GROSS;
+      window.others.posts[1].likes = settings.condition_EXKLUDIERT_GROSS_adjusted_likes;
+      
+      settings.group_size=10;
 			break;
-		case "INCLUDIERT_KLEIN":
-			window.settings.condition_likes = settings.condition_INCLUDIERT_KLEIN_likes;
-			window.others.posts[1].likes = settings.condition_INCLUDIERT_KLEIN_adjusted_likes;
+		case "INKLUDIERT_KLEIN":
+			window.settings.condition_likes = settings.condition_INKLUDIERT_KLEIN_likes;
+			window.others = window.others_INKLUDIERT_KLEIN;
+      window.others.posts[1].likes = settings.condition_INKLUDIERT_KLEIN_adjusted_likes;
 			break;
-    case "INCLUDIERT_GROSS":
-      window.settings.condition_likes = settings.condition_INCLUDIERT_GROSS_likes;
-      window.others.posts[1].likes = settings.condition_INCLUDIERT_GROSS_adjusted_likes;
+    case "INKLUDIERT_GROSS":
+      window.settings.condition_likes = settings.condition_INKLUDIERT_GROSS_likes;
+      window.others = window.others_INKLUDIERT_GROSS;
+      window.others.posts[1].likes = settings.condition_INKLUDIERT_GROSS_adjusted_likes;
+
       break;
 	}	
 	  
@@ -497,8 +517,8 @@ $(function() {
 
   // Set Settings, get Participant No. and Condition No.
   set_settings();
-  get_params();
-  adjust_to_condition();
+  //get_params();
+  //adjust_to_condition();
 
   // Start with the intro slide
   init_intro();

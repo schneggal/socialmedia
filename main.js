@@ -6,7 +6,7 @@
 $(function() {
 
   // **Parameters**
-  // -----------
+  // ------------
   
   function set_settings() {
     window.settings = [];
@@ -57,18 +57,21 @@ $(function() {
   settings.condition_EXKLUDIERT_MITTEL_likes = [15000, 99999999999]; //1
   settings.condition_INKLUDIERT_MITTEL_likes = [15000, 29000, 37000, 40000, 45000, 58000, 77000]; //7
 
-	// **Others' likes**     
-	// To keep the total distribution of "likes" constant across conditions, The "likes" received by one group member can be adjusted according to the participant's. By default, the other group member receives 9 "likes" in the participant-ostracism condition, 5 in the participant-inclusion condtion, and 1 in the participant-overinclusion condtion.
-	
+  // **Others' likes**     
+  // To keep the total distribution of "likes" constant across conditions, The "likes" received by one group member can be adjusted according to the participant's. By default, the other group member receives 9 "likes" in the participant-ostracism condition, 5 in the participant-inclusion condtion, and 1 in the participant-overinclusion condtion.
+  
   settings.condition_EXKLUDIERT_GROSS_adjusted_likes = [18000, 20000, 30000,35000, 70000, 90000, 100000, 110000, 130000]; // 9
   settings.condition_EXKLUDIERT_KLEIN_adjusted_likes = [18000, 80000]; // 2
   settings.condition_EXKLUDIERT_MITTEL_adjusted_likes = [18000, 20000, 30000,35000, 70000, 90000, 100000]; // 7
 
   settings.condition_INKLUDIERT_GROSS_adjusted_likes = [18000, 20000, 30000,35000, 70000, 90000, 100000, 110000, 130000]; // 9
-	settings.condition_INKLUDIERT_KLEIN_adjusted_likes = [18000, 80000]; // 2	
+  settings.condition_INKLUDIERT_KLEIN_adjusted_likes = [18000, 80000]; // 2 
   settings.condition_INKLUDIERT_MITTEL_adjusted_likes = [18000, 20000, 30000,35000, 70000, 90000, 100000]; // 7
   
 
+
+
+    window.user = [];
 
 
 
@@ -78,7 +81,7 @@ $(function() {
   // STEFFI: wir können diese liste auch anpassen dass für jede gruppe andere namen snd - würd aber eher sagen ihr schaut dass ihr immer die gleichen test user überall habt und ergänzt nur mehr dann hamma weniger zum anpassen
     settings.likes_by = ['Anna','Johannes','Marion','Peter','Matthias','Sandra','Rachid','Lisa','xxxx', 'xxxx']; 
   }
-  
+
   // -------------------
   // Above were the basic parameters you can adjust using the instructions. The remaining code is also annotated, but we do not recommend changing it, unless you are comfortable with web programming.
   // -------------------
@@ -112,12 +115,12 @@ $(function() {
 
   		if(uname == "") {
   			error = 1;
-  			errormsg = 'Bitte Text einfügen';
+  			errormsg = 'Please enter text';
   			uname = "undefined";
   		}
   		if(not_alphanumeric(uname)) {
   			error = 1;
-  			errormsg = 'Bitte nur Ziffern (und keine Leerzeichen)';
+        errormsg = 'Bitte nur Ziffern (und keine Leerzeichen)';
   		}  		
 
   		if(error == 0) {
@@ -233,6 +236,8 @@ $(function() {
   function init_task() {
 
     $('#task').show();
+    adjust_to_condition();
+
 
 	shortcut.add("Backspace",function() {});      
 
@@ -255,17 +260,19 @@ $(function() {
 			}
 		  ]
 		};
+
+    
 		
     // Add user box to slide     
 	  var tpl = $('#usertmp').html(),html = Mustache.to_html(tpl, users);
 	  $("#task").append(html);
 	  
     // Add other boxes to slide    
-    adjust_to_condition();
+
 	  
     var tpl = $('#otherstmp').html(),html = Mustache.to_html(tpl, window.others);
 	  $("#task").append(html);
-    debugger;
+    
  
     // Randomize order of other players boxes
     function reorder() {
@@ -289,7 +296,7 @@ $(function() {
   		var that = $(this);
   		var usernames = $(this).data('usernames').split(",");
   		var times = $(this).data('likes').split(",");
-
+      debugger; 
   		for(var i=0; i<times.length; i++) 
   		{ 
   			times[i] = +times[i]; 
@@ -344,8 +351,39 @@ $(function() {
     $('#final-continue').show();
 
     $('#timer').text('00:00');
+
+     var NAME = window.username;
+     var GROUP = window.condition;
+
+     alert(NAME);
+     alert(GROUP);
+
+     // make the postdata
+     // var postData = '&ID='+ID+'&NAME='+NAME+'&PASSWORD='+PASSWORD+'&CREDITS'+CREDITS+'&EMAIL_ID'+EMAIL_ID+'&CREATED_ON'+CREATED_ON+'&MODIFIED_ON'+MODIFIED_ON;
+     // alert(postData);
+     var myData={"EMAIL":NAME,"GROUP":GROUP};
+     //call your .php script in the background, 
+     //when it returns it will call the success function if the request was successful or 
+     //the error one if there was an issue (like a 404, 500 or any other error status)
+     $.ajax({
+        url : "php/add.php",
+        type: "POST",
+        dataType : 'JSON',
+        data : myData,
+
+        success: function(data,status)
+         {
+            alert("success");
+             }
+
+    }); 
+
     
     $('#final-continue').on('click', function() {
+
+
+
+
 
       // Redirect link
       location.href = window.redirect+'&p='+window.participant+'&c='+window.condition+'&u='+encodeURI(window.username)+'&av='+window.avatarexport+'&d='+encodeURI(window.description);
@@ -402,22 +440,22 @@ $(function() {
   condition="INKLUDIERT_KLEIN";
   //condition="INKLUDIERT_GROSS";
   //condition="INKLUDIERT_MITTEL";
-  
+
 
 	switch(condition) {
-		case "EXKLUDIERT_KLEIN":
-			window.settings.condition_likes = settings.condition_EXKLUDIERT_KLEIN_likes;
-			window.others = window.others_EXKULDIERT_KLEIN;
+    case "EXKLUDIERT_KLEIN":
+      window.settings.condition_likes = settings.condition_EXKLUDIERT_KLEIN_likes;
+      window.others = window.others_EXKULDIERT_KLEIN;
       window.others.posts[1].likes = settings.condition_EXKLUDIERT_KLEIN_adjusted_likes;
       settings.group_size = 4;
-			break;
+      break;
 
-		case "EXKLUDIERT_GROSS":
-			window.settings.condition_likes = settings.condition_EXKLUDIERT_GROSS_likes;
+    case "EXKLUDIERT_GROSS":
+      window.settings.condition_likes = settings.condition_EXKLUDIERT_GROSS_likes;
       window.others = window.others_EXKULDIERT_GROSS;
       window.others.posts[1].likes = settings.condition_EXKLUDIERT_GROSS_adjusted_likes;
       settings.group_size=19;
-			break;
+      break;
 
     case "EXKLUDIERT_MITTEL":
       window.settings.condition_likes = settings.condition_EXKLUDIERT_MITTEL_likes;
@@ -426,9 +464,9 @@ $(function() {
       settings.group_size=11;
       break;
 
-		case "INKLUDIERT_KLEIN":
-			window.settings.condition_likes = settings.condition_INKLUDIERT_KLEIN_likes;
-			window.others = window.others_INKLUDIERT_KLEIN;
+    case "INKLUDIERT_KLEIN":
+      window.settings.condition_likes = settings.condition_INKLUDIERT_KLEIN_likes;
+      window.others = window.others_INKLUDIERT_KLEIN;
       window.others.posts[1].likes = settings.condition_INKLUDIERT_KLEIN_adjusted_likes;
       break;
 
@@ -443,11 +481,12 @@ $(function() {
       window.others = window.others_INKLUDIERT_MITTEL;
       window.others.posts[1].likes = settings.condition_INKLUDIERT_MITTEL_adjusted_likes;
       break;
+   	}	
 
-	}	
-	  
+
   }
-  
+
+    
 
   // The variable QueryString contains the url parameters, i.e. condition no. and participant no.
   // via http://stackoverflow.com/a/979995
@@ -540,6 +579,7 @@ $(function() {
 
   // Set Settings, get Participant No. and Condition No.
   set_settings();
+  
   //get_params();
   //adjust_to_condition();
 

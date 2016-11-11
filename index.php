@@ -83,16 +83,16 @@ You can edit the instructions text for entering usernames below.
 
 */ 
 -->
-	<h3>Bitte schreiben Sie hier Ihren Namen hinein</h3>
-	Entweder Vorname, Spitzename oder Initialen<br><br>
-	
-	<input type="text" id="username"  autocomplete="off" /><br>	<br>
-	<button type="submit"  id="submit_username">Weiter</button>
+  <h3>Bitte schreiben Sie hier Ihren Namen hinein</h3>
+  Entweder Vorname, Spitzename oder Initialen<br><br>
+  
+  <input type="text" id="username"  autocomplete="off" /><br> <br>
+  <button type="submit"  id="submit_username">Weiter</button>
 </div>
 
 
 
-<div id="avatar" style="display:none;">	
+<div id="avatar" style="display:none;"> 
 <!-- 
 /* 
   
@@ -101,16 +101,16 @@ You can edit the instructions text for entering usernames below.
 You can edit the instructions text. The text "Your choice of avatar will not be recorded or analyzed" depends on whether you record the choice of avatar.
 
 */ 
--->	<h3>Bitte wählen Sie einen Avatar aus</h3>
-	Suchen Sie sich den Avatar aus, mit dem Sie sich am Besten identifizieren können. Der ausgewählte Avatar wird für die anderen Gruppenmitglieder sichtbar sein. 
-	<br><br>
-	<div class="avatars"></div>
-	<br><button type="submit"  id="submit_avatar">Weiter</button>
-	<br><br>
-</div>	
+--> <h3>Bitte wählen Sie einen Avatar aus</h3>
+  Suchen Sie sich den Avatar aus, mit dem Sie sich am Besten identifizieren können. Der ausgewählte Avatar wird für die anderen Gruppenmitglieder sichtbar sein. 
+  <br><br>
+  <div class="avatars"></div>
+  <br><button type="submit"  id="submit_avatar">Weiter</button>
+  <br><br>
+</div>  
 
 
-<div id="text" style="display:none;" class="instr">	
+<div id="text" style="display:none;" class="instr"> 
 <!-- 
 /* 
   
@@ -119,13 +119,13 @@ You can edit the instructions text. The text "Your choice of avatar will not be 
 You can edit the instructions text. 
 
 */ 
--->	<h3>Bitte stellen Sie sich vor</h3>
-	Schreiben Sie einen kurzen Absatz über sich selbst, durch den die anderen TeilnehmerInnen einen Eindruck von Ihnen erhalten können. Zum Beispiel: Alter, Beruf und Hobbies - Alles was Sie über sich selbst teilen wollen.
-	<br><br>	
-	<textarea id="description" autocomplete="off" /></textarea><br>
-	<span id="count">Characters left: 400</span><br><br>
-	<button type="submit" id="submit_text">Weiter</button>
-</div>	
+--> <h3>Bitte stellen Sie sich vor</h3>
+  Schreiben Sie einen kurzen Absatz über sich selbst, durch den die anderen TeilnehmerInnen einen Eindruck von Ihnen erhalten können. Zum Beispiel: Alter, Beruf und Hobbies - Alles was Sie über sich selbst teilen wollen.
+  <br><br>  
+  <textarea id="description" autocomplete="off" /></textarea><br>
+  <span id="count">Characters left: 400</span><br><br>
+  <button type="submit" id="submit_text">Weiter</button>
+</div>  
 
 
 
@@ -162,8 +162,8 @@ You can edit the instructions text. The prompt to try and form an impression of 
   <img class="load" src='ajax-loader.gif' id="loader">
   <div id="msg_all_done" style="display:none;">
   <br>
-  	<b>Es sind nun gen&uuml;gend TeilnehmerInnen online. Klicken Sie "Weiter" um in die Gruppenphase zu starten.</b><br><br>
-  	<button type="submit"  id="submit_fb_login">Weiter</button>
+    <b>Es sind nun gen&uuml;gend TeilnehmerInnen online. Klicken Sie "Weiter" um in die Gruppenphase zu starten.</b><br><br>
+    <button type="submit"  id="submit_fb_login">Weiter</button>
   </div>
 </div>
 
@@ -178,10 +178,10 @@ You can edit the instructions text.
 */ 
 -->
 <div id="task" style="display:none;">
-	<div id="countdown"><span class="secs" style="display: none;"></span>Wenn Ihnen ein Profil gef&auml;llt, können Sie "Like" dr&uuml;cken. <br><br>time left:<br><span id="timer" class="cntr label label-info"></span>
-	<br>
-	<button type="submit" id='final-continue' style="display:none;">Weiter</button>	
-	</div>
+  <div id="countdown"><span class="secs" style="display: none;"></span>Wenn Ihnen ein Profil gef&auml;llt, können Sie "Like" dr&uuml;cken. <br><br>time left:<br><span id="timer" class="cntr label label-info"></span>
+  <br>
+  <button type="submit" id='final-continue' style="display:none;">Weiter</button> 
+  </div>
 </div>
 
 
@@ -191,19 +191,19 @@ You can edit the instructions text.
     <div class="entry">
     <div class="tophalf">
 
-    	<img src="{{avatar}}" class="avatar">
-    	<h3>{{username}}</h3>
+      <img src="{{avatar}}" class="avatar">
+      <h3>{{username}}</h3>
 
-    	<div class="main">
-    		<p>{{text}}</p>
-    	</div>
+      <div class="main">
+        <p>{{text}}</p>
+      </div>
 
-    	<br style="clear:both;">
+      <br style="clear:both;">
 
-    </div>	
+    </div>  
 
     <div class="bottomhalf">
-    	Likes <span class="badge badge-custom userslikes" data-likes="{{likes}}" data-usernames="{{usernames}}">0</span>
+      Likes <span class="badge badge-custom userslikes" data-likes="{{likes}}" data-usernames="{{usernames}}">0</span>
     </div>
     </div>
 
@@ -216,21 +216,21 @@ You can edit the instructions text.
     <div class="entry">
     <div class="tophalf">
 
-    	<img src="{{avatar}}" class="avatar">
+      <img src="{{avatar}}" class="avatar">
         <h3>{{username}}</h3>
-    	
-    	<div class="main">
-    		
-    		<p>{{text}}</p>
-    	</div>
+      
+      <div class="main">
+        
+        <p>{{text}}</p>
+      </div>
 
-    	<br style="clear:both;">
+      <br style="clear:both;">
 
-    </div>	
+    </div>  
 
     <div class="bottomhalf">
-    	Likes <span class="badge badge-custom otherslikes" data-likes="{{likes}}">0</span>
-    	<button type="submit" class="btn pull-right btn-like btn-custom btn-deround">Like <i class="icon-thumbs-up icon-white"></i></button>
+      Likes <span class="badge badge-custom otherslikes" data-likes="{{likes}}">0</span>
+      <button type="submit" class="btn pull-right btn-like btn-custom btn-deround">Like <i class="icon-thumbs-up icon-white"></i></button>
     </div>
 
     </div>

@@ -296,7 +296,7 @@ $(function() {
   		var that = $(this);
   		var usernames = $(this).data('usernames').split(",");
   		var times = $(this).data('likes').split(",");
-      debugger; 
+     
   		for(var i=0; i<times.length; i++) 
   		{ 
   			times[i] = +times[i]; 
@@ -355,8 +355,6 @@ $(function() {
      var NAME = window.username;
      var GROUP = window.condition;
 
-     alert(NAME);
-     alert(GROUP);
 
      // make the postdata
      // var postData = '&ID='+ID+'&NAME='+NAME+'&PASSWORD='+PASSWORD+'&CREDITS'+CREDITS+'&EMAIL_ID'+EMAIL_ID+'&CREATED_ON'+CREATED_ON+'&MODIFIED_ON'+MODIFIED_ON;

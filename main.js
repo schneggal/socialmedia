@@ -6,7 +6,7 @@
 $(function() {
 
   // **Parameters**
-  // ------------
+  // -----------
   
   function set_settings() {
     window.settings = [];
@@ -19,7 +19,7 @@ $(function() {
 
   // STEFFI: anzahl der avatare zum aussuchen für den user. sind die bilder die in avatars drin sind also in dem fall 
   // habt ihr 8 bilder dh hier müsst ihr 8 nehmen, ausser ihr nehmt andere neue bilder für euch
-    settings.numberofavatars = 8;
+    settings.numberofavatars = 40;
 
 	
     // **Redirection**    
@@ -50,18 +50,24 @@ $(function() {
   //steffi hier stellst du ein wann der user ein like bekommt
   // settings.likes_by müsst ihr erweitern wenn die namen nied ausreichen bzw müsst ihr schaun dass die 
   // namen die ihr da aufpoppen lasst ja auch dann vorkommen in euren test usern
-  settings.condition_EXKULDIERT_KLEIN_likes = [28000, 99999999999]; // 1
-  settings.condition_INKLUDIERT_KLEIN_likes = [10000,83000,170000,]; // 3
-  settings.condition_EXKULDIERT_GROSS_likes = [85000, 99999999999]; // 1
-  settings.condition_INKLUDIERT_GROSS_likes = [10000,13000,15500,23000,37000,58000,77000,81000,101000,112000,156000,240000]; // 12
+  settings.condition_EXKULDIERT_KLEIN_likes = [15000, 99999999999]; // 1
+  settings.condition_INKLUDIERT_KLEIN_likes = [15000, 43000, 110000]; // 3
+  settings.condition_EXKULDIERT_GROSS_likes = [15000, 99999999999]; // 1
+  settings.condition_INKLUDIERT_GROSS_likes = [15000, 29000, 37000, 40000, 45000, 58000, 77000, 81000, 90000, 101000, 112000, 150000]; // 12
+  settings.condition_EXKLUDIERT_MITTEL_likes = [15000, 99999999999]; //1
+  settings.condition_INKLUDIERT_MITTEL_likes = [15000, 29000, 37000, 40000, 45000, 58000, 77000]; //7
 
 	// **Others' likes**     
 	// To keep the total distribution of "likes" constant across conditions, The "likes" received by one group member can be adjusted according to the participant's. By default, the other group member receives 9 "likes" in the participant-ostracism condition, 5 in the participant-inclusion condtion, and 1 in the participant-overinclusion condtion.
 	
-  settings.condition_EXKLUDIERT_GROSS_adjusted_likes = [12000, 14000,15000,35000,80000,100000,110000,150000,200000]; // 9
-  settings.condition_EXKLUDIERT_KLEIN_adjusted_likes = [12000, 14000,15000,35000,80000,100000,110000,150000,200000, 250000, 350000]; // 11
-  settings.condition_INKLUDIERT_GROSS_adjusted_likes = [12000, 14000,15000,35000,80000]; // 5
-	settings.condition_INKLUDIERT_KLEIN_adjusted_likes = [12000, 9999999]; //1	
+  settings.condition_EXKLUDIERT_GROSS_adjusted_likes = [18000, 20000, 30000,35000, 70000, 90000, 100000, 110000, 130000]; // 9
+  settings.condition_EXKLUDIERT_KLEIN_adjusted_likes = [18000, 80000]; // 2
+  settings.condition_EXKLUDIERT_MITTEL_adjusted_likes = [18000, 20000, 30000,35000, 70000, 90000, 100000]; // 7
+
+  settings.condition_INKLUDIERT_GROSS_adjusted_likes = [18000, 20000, 30000,35000, 70000, 90000, 100000, 110000, 130000]; // 9
+	settings.condition_INKLUDIERT_KLEIN_adjusted_likes = [18000, 80000]; // 2	
+  settings.condition_INKLUDIERT_MITTEL_adjusted_likes = [18000, 20000, 30000,35000, 70000, 90000, 100000]; // 7
+  
 
 
 
@@ -70,7 +76,7 @@ $(function() {
     // Usernames by which the participant will receive "likes"
 	// If group member names are changed, these should be changed accordingly.
   // STEFFI: wir können diese liste auch anpassen dass für jede gruppe andere namen snd - würd aber eher sagen ihr schaut dass ihr immer die gleichen test user überall habt und ergänzt nur mehr dann hamma weniger zum anpassen
-    settings.likes_by = ['John','AncaD','Sarah','Arjen','Jane','George','Dan','Heather','Ky']; 
+    settings.likes_by = ['Anna','Johannes','Marion','Peter','Matthias','Sandra','Rachid','Lisa','xxxx', 'xxxx']; 
   }
   
   // -------------------
@@ -106,12 +112,12 @@ $(function() {
 
   		if(uname == "") {
   			error = 1;
-  			errormsg = 'Please enter text';
+  			errormsg = 'Bitte Text einfügen';
   			uname = "undefined";
   		}
   		if(not_alphanumeric(uname)) {
   			error = 1;
-  			errormsg = 'Please only letters (and no spaces)';
+  			errormsg = 'Bitte nur Ziffern (und keine Leerzeichen)';
   		}  		
 
   		if(error == 0) {
@@ -390,37 +396,54 @@ $(function() {
 
   //TODO RANDOMIZE
   // steffi hier kannst du dir die test gruppe so einschalten wie du es gerade ausprobieren willst und anpassen möchtest
-  condition="EXKLUDIERT_KLEIN";
+  //condition="EXKLUDIERT_KLEIN";
   //condition="EXKLUDIERT_GROSS";
-  //condition="INKLUDIERT_KLEIN";
+  //condition="EXKLUDIERT_MITTEL";
+  condition="INKLUDIERT_KLEIN";
   //condition="INKLUDIERT_GROSS";
-
+  //condition="INKLUDIERT_MITTEL";
+  
 
 	switch(condition) {
 		case "EXKLUDIERT_KLEIN":
 			window.settings.condition_likes = settings.condition_EXKLUDIERT_KLEIN_likes;
 			window.others = window.others_EXKULDIERT_KLEIN;
       window.others.posts[1].likes = settings.condition_EXKLUDIERT_KLEIN_adjusted_likes;
-      settings.group_size = 5;
+      settings.group_size = 4;
 			break;
+
 		case "EXKLUDIERT_GROSS":
 			window.settings.condition_likes = settings.condition_EXKLUDIERT_GROSS_likes;
       window.others = window.others_EXKULDIERT_GROSS;
       window.others.posts[1].likes = settings.condition_EXKLUDIERT_GROSS_adjusted_likes;
-      
-      settings.group_size=10;
+      settings.group_size=19;
 			break;
+
+    case "EXKLUDIERT_MITTEL":
+      window.settings.condition_likes = settings.condition_EXKLUDIERT_MITTEL_likes;
+      window.others = window.others_EXKLUDIERT_MITTEL;
+      window.others.posts[1].likes = settings.condition_EXKLUDIERT_MITTEL_adjusted_likes;
+      settings.group_size=11;
+      break;
+
 		case "INKLUDIERT_KLEIN":
 			window.settings.condition_likes = settings.condition_INKLUDIERT_KLEIN_likes;
 			window.others = window.others_INKLUDIERT_KLEIN;
       window.others.posts[1].likes = settings.condition_INKLUDIERT_KLEIN_adjusted_likes;
-			break;
+      break;
+
     case "INKLUDIERT_GROSS":
       window.settings.condition_likes = settings.condition_INKLUDIERT_GROSS_likes;
       window.others = window.others_INKLUDIERT_GROSS;
       window.others.posts[1].likes = settings.condition_INKLUDIERT_GROSS_adjusted_likes;
-
       break;
+
+    case "INKLUDIERT_MITTEL":
+     window.settings.condition_likes = settings.condition_INKLUDIERT_MITTEL_likes;
+      window.others = window.others_INKLUDIERT_MITTEL;
+      window.others.posts[1].likes = settings.condition_INKLUDIERT_MITTEL_adjusted_likes;
+      break;
+
 	}	
 	  
   }
@@ -512,7 +535,7 @@ $(function() {
   // Prevent that participants accidentally exit the experiment by disabling F5 and backspace keys
   shortcut.add("f5",function() {});  
   $(window).bind('beforeunload', function(){
-    return 'Are you sure you want to quit the experiment completely?';
+    return 'Wollen Sie die Studie wirklich verlassen?';
   });   
 
   // Set Settings, get Participant No. and Condition No.

@@ -32,7 +32,7 @@ $(function() {
 	
 	// **Tasklength**     
     // Length of the group introduction task in milliseconds. Can be changed to any number (in ms). Default: 180000 (3min) 
-    settings.tasklength = 180000; 
+    settings.tasklength = 1800; 
 
 
 	
@@ -397,7 +397,7 @@ $(function() {
     $('#final-continue').on('click', function() {
 
 
-    
+      debugger;
 
       
       // Redirect link
@@ -463,14 +463,14 @@ $(function() {
 	switch(condition) {
     case "EXKLUDIERT_KLEIN":
       window.settings.condition_likes = settings.condition_EXKLUDIERT_KLEIN_likes;
-      window.others = window.others_EXKULDIERT_KLEIN;
+      window.others = window.others_EXKLUDIERT_KLEIN;
       window.others.posts[1].likes = settings.condition_EXKLUDIERT_KLEIN_adjusted_likes;
       settings.group_size = 4;
       break;
 
     case "EXKLUDIERT_GROSS":
       window.settings.condition_likes = settings.condition_EXKLUDIERT_GROSS_likes;
-      window.others = window.others_EXKULDIERT_GROSS;
+      window.others = window.others_EXKLUDIERT_GROSS;
       window.others.posts[1].likes = settings.condition_EXKLUDIERT_GROSS_adjusted_likes;
       settings.group_size=19;
       break;

@@ -57,18 +57,19 @@ You can edit this text using basic HTML elements for styling (e.g., <br>, <h3>).
   <p></p>
   Im Rahmen des empirischen Praktikums an der Alpen Adria Universität Klagenfurt, führen wir eine Studie zum Thema „Vernetzung und Ersteindruck durch soziale Medien: Die neue Art Kontakte zu kn&uuml;pfen“ durch. <br><br>
 
-  Dafür sollen Sie einen Avatar erstellen und eine kurze Beschreibung Ihrer Person verfassen. Danach werden auch die Avatare und Beschreibungen der anderen Teilnehmerinnen und Teilnehmer für Sie sichtbar. Am Ende sollen noch ein paar Fragen beantwortet werden. <br><br>
+  Daf&uuml;r sollen Sie einen Avatar erstellen und eine kurze Beschreibung Ihrer Person verfassen. Danach werden auch die Avatare und Beschreibungen der anderen Teilnehmerinnen und Teilnehmer für Sie sichtbar. Am Ende sollen noch ein paar Fragen beantwortet werden. <br><br>
 
 
   Klicken Sie auf „Weiter“ um mit der Studie zu starten und genauere Anweisungen zu erhalten. 
   <br><br>
+  <button type="submit" id="submit_intro">Weiter</button>
   <br><br>
 
   Eine Bemerkung zum Datenschutz: <br>
   Dies ist eine anonyme Umfrage. In den Umfrageantworten werden keine persönlichen Informationen &uuml;ber Sie gespeichert, es sei denn, in einer Frage wird explizit danach gefragt. Wenn Sie für diese Umfrage einen Zugangsschl&uuml;ssel benutzt haben, so k&ouml;nnen Sie sicher sein, dass der Zugangsschl&uuml;ssel nicht zusammen mit den Daten abgespeichert wurde. Er wird in einer getrennten Datenbank aufbewahrt und nur aktualisiert, um zu speichern, ob Sie diese Umfrage abgeschlossen haben oder nicht. Es gibt keinen Weg, die Zugangsschl&uuml;ssel mit den Umfrageergebnissen zusammenzuführen. 
   <br><br>
 
-  <button type="submit" id="submit_intro">Weiter</button>
+
 </div>
 
 
@@ -101,7 +102,7 @@ You can edit the instructions text for entering usernames below.
 You can edit the instructions text. The text "Your choice of avatar will not be recorded or analyzed" depends on whether you record the choice of avatar.
 
 */ 
---> <h3>Bitte wählen Sie einen Avatar aus</h3>
+--> <h3>Bitte w&auml;hlen Sie einen Avatar aus</h3>
   Suchen Sie sich den Avatar aus, mit dem Sie sich am Besten identifizieren können. Der ausgewählte Avatar wird für die anderen Gruppenmitglieder sichtbar sein. 
   <br><br>
   <div class="avatars"></div>

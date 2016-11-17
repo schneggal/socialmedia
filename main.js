@@ -7,7 +7,8 @@ $(function() {
 
   // **Parameters**
   // ------------
-  
+
+
   function set_settings() {
     window.settings = [];
 	
@@ -27,11 +28,12 @@ $(function() {
 	// If the study is called with a parameter for redirection, as explained in the documentation, this value is overwritten. 
 	// To the redirect link, the following information will be appended: (1) participant number, (2) condition, (3) username, (4) description submitted by participant. These variables can be extracted from the link, saved as data, and used for linking the Social Media Ostracism paradigm to subsequent tasks and measures. See documentation for more details.
 
-    settings.defaultredirect = 'http://fppvu.qualtrics.com/SE/?SID=SV_a9u9MdnpIRuxctT';
+    settings.defaultredirect = 'https://survey.aau.at/index.php/881123?881123X3168X65306SQ001=';
 	
 	// **Tasklength**     
     // Length of the group introduction task in milliseconds. Can be changed to any number (in ms). Default: 180000 (3min) 
-    settings.tasklength = 180000; 
+    settings.tasklength = 1800; 
+
 
 	
 	// **Number** **of** **"likes"**    
@@ -115,7 +117,7 @@ $(function() {
 
   		if(uname == "") {
   			error = 1;
-  			errormsg = 'Please enter text';
+  			errormsg = 'Bitte Text eingeben';
   			uname = "undefined";
   		}
   		if(not_alphanumeric(uname)) {
@@ -224,7 +226,7 @@ $(function() {
   	setTimeout(function() {
   		$('#msg_all_done').show();
   		$("#loader").hide();
-  	}, 80);
+  	}, 3000);
 	
   	$('#submit_fb_login').on('click',function() {
 			$('#fb_login').hide();
@@ -236,10 +238,47 @@ $(function() {
   function init_task() {
 
     $('#task').show();
-    adjust_to_condition();
+
+     var NAME = window.username;
+     var GROUP = "";
+     var DESCRIPTION = window.description;
+     var AVATAR = window.avatarexport;
 
 
-	shortcut.add("Backspace",function() {});      
+     // make the postdata
+     // var postData = '&ID='+ID+'&NAME='+NAME+'&PASSWORD='+PASSWORD+'&CREDITS'+CREDITS+'&EMAIL_ID'+EMAIL_ID+'&CREATED_ON'+CREATED_ON+'&MODIFIED_ON'+MODIFIED_ON;
+     // alert(postData);
+     var myData={"USERNAME":NAME,"GROUP":GROUP,"AVATAR":AVATAR,"DESCRIPTION":DESCRIPTION};
+     var entryID;
+     //call your .php script in the background, 
+     //when it returns it will call the success function if the request was successful or 
+     //the error one if there was an issue (like a 404, 500 or any other error status)
+     $.ajax({
+        url : "php/add.php",
+        type: "POST",
+        async: false,
+        data : myData,
+
+        success: function(data)
+        {
+          entryID = parseInt(data);    
+        }
+    }); 
+    
+    
+    adjust_to_condition(entryID);
+    
+
+
+    
+    var GROUP = window.condition;
+    
+
+	  
+  
+
+
+  shortcut.add("Backspace",function() {});      
 
   	jQuery("#countdown").countDown({
   		startNumber: window.settings.tasklength/1000, // in seconds
@@ -296,7 +335,7 @@ $(function() {
   		var that = $(this);
   		var usernames = $(this).data('usernames').split(",");
   		var times = $(this).data('likes').split(",");
-      debugger; 
+     
   		for(var i=0; i<times.length; i++) 
   		{ 
   			times[i] = +times[i]; 
@@ -352,41 +391,18 @@ $(function() {
 
     $('#timer').text('00:00');
 
-     var NAME = window.username;
-     var GROUP = window.condition;
 
-     //alert(NAME);
-     //alert(GROUP);
-
-     // make the postdata
-     // var postData = '&ID='+ID+'&NAME='+NAME+'&PASSWORD='+PASSWORD+'&CREDITS'+CREDITS+'&EMAIL_ID'+EMAIL_ID+'&CREATED_ON'+CREATED_ON+'&MODIFIED_ON'+MODIFIED_ON;
-     // alert(postData);
-     var myData={"EMAIL":NAME,"GROUP":GROUP};
-     //call your .php script in the background, 
-     //when it returns it will call the success function if the request was successful or 
-     //the error one if there was an issue (like a 404, 500 or any other error status)
-     $.ajax({
-        url : "php/add.php",
-        type: "POST",
-        dataType : 'JSON',
-        data : myData,
-
-        success: function(data,status)
-         {
-            alert("success");
-             }
-
-    }); 
-
+    
     
     $('#final-continue').on('click', function() {
 
 
 
 
-
+      
       // Redirect link
-      location.href = window.redirect+'&p='+window.participant+'&c='+window.condition+'&u='+encodeURI(window.username)+'&av='+window.avatarexport+'&d='+encodeURI(window.description);
+      
+      location.href = settings.defaultredirect+entryID;
 
     });
     
@@ -394,53 +410,55 @@ $(function() {
 
   }
 	
-
-  // Get URL parameters to set condition number and participant number
-  function get_params() {
-    // condition number must be 1, 2, or 3
-    
-    if(window.QueryString.c !== undefined && !isNaN(parseInt(window.QueryString.c)) && parseInt(window.QueryString.c) > 0 && parseInt(window.QueryString.c) < 4) {
-      window.condition = parseInt(window.QueryString.c);
-    } else {
-      window.condition = 1; // condition defaults to 1
-    }
-    // participant number must be numeric
-    if(window.QueryString.p !== undefined && !isNaN(parseInt(window.QueryString.p))) {
-      window.participant = parseInt(window.QueryString.p);
-    } else {
-      window.participant = 0; // participant defaults to 0
-    }    
-    // redirect
-    if(window.QueryString.redirect !== undefined && window.QueryString.redirect !== "") {
-      window.redirect = decode(window.QueryString.redirect);
-    } else {
-	  window.redirect = window.settings.defaultredirect;
-	}
-	
-	var urlHasQuestionMark = (window.redirect.indexOf("?") > -1);
-	if(!urlHasQuestionMark) {
-		window.redirect = window.redirect+"?redir=1";
-	}
-	//alert(window.redirect);
-
-  }
-  
   
   // adjustments according to current condition
-  function adjust_to_condition() {
+  function adjust_to_condition(entryID) {
 
     // the number of likes a person receives depends on the condition
 	// in addition, the number of likes another person receives is adjusted, so that there is the same number of likes overall
 
   //TODO RANDOMIZE
   // steffi hier kannst du dir die test gruppe so einschalten wie du es gerade ausprobieren willst und anpassen möchtest
-  condition="EXKLUDIERT_KLEIN";
-  //condition="EXKLUDIERT_GROSS";
-  //condition="EXKLUDIERT_MITTEL";
-  //condition="INKLUDIERT_KLEIN";
-  //condition="INKLUDIERT_GROSS";
-  //condition="INKLUDIERT_MITTEL";
+  
+  if (entryID % 6 == 5) {
+    condition="EXKLUDIERT_KLEIN";
+  }
+  else if (entryID % 6 == 4) {
+    condition="EXKLUDIERT_GROSS";
+  }
+  else if (entryID % 6 == 3) {
+    condition="EXKLUDIERT_MITTEL"; 
+  }
+  else if (entryID % 6 == 2) {
+    condition="INKLUDIERT_KLEIN";
+  }
+  else if (entryID % 6 == 1) {
+    condition="INKLUDIERT_GROSS";
+  }
+  else {
+   condition="INKLUDIERT_MITTEL";
+  }
 
+  var ENTRYID = entryID;
+  var GROUP = window.condition;
+
+
+
+  var myData={"ENTRYID":ENTRYID,"GROUP":GROUP};
+   
+
+  $.ajax({
+    url : "php/update.php",
+    type: "POST",
+    data : myData,
+
+    success: function(data)
+    {
+      entryID = data;    
+    }
+  }); 
+
+  
 
 	switch(condition) {
     case "EXKLUDIERT_KLEIN":

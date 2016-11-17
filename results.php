@@ -33,7 +33,6 @@ If you don't have experience with programming, it is important that you alter on
 
 
   <table>
-    
     <?php include 'show_entries.php';?>  
 
   </table>

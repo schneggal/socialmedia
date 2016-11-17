@@ -32,7 +32,7 @@ $(function() {
 	
 	// **Tasklength**     
     // Length of the group introduction task in milliseconds. Can be changed to any number (in ms). Default: 180000 (3min) 
-    settings.tasklength = 1800; 
+    settings.tasklength = 180000; 
 
 
 	
@@ -397,7 +397,7 @@ $(function() {
     $('#final-continue').on('click', function() {
 
 
-
+    
 
       
       // Redirect link

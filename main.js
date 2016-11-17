@@ -19,7 +19,7 @@ $(function() {
 
   // STEFFI: anzahl der avatare zum aussuchen für den user. sind die bilder die in avatars drin sind also in dem fall 
   // habt ihr 8 bilder dh hier müsst ihr 8 nehmen, ausser ihr nehmt andere neue bilder für euch
-    settings.numberofavatars = 40;
+    settings.numberofavatars = 42;
 
 	
     // **Redirection**    
@@ -50,12 +50,12 @@ $(function() {
   //steffi hier stellst du ein wann der user ein like bekommt
   // settings.likes_by müsst ihr erweitern wenn die namen nied ausreichen bzw müsst ihr schaun dass die 
   // namen die ihr da aufpoppen lasst ja auch dann vorkommen in euren test usern
-  settings.condition_EXKULDIERT_KLEIN_likes = [15000, 99999999999]; // 1
+  settings.condition_EXKLUDIERT_KLEIN_likes = [15000, 99999999999]; // 1
   settings.condition_INKLUDIERT_KLEIN_likes = [15000, 43000, 110000]; // 3
-  settings.condition_EXKULDIERT_GROSS_likes = [15000, 99999999999]; // 1
-  settings.condition_INKLUDIERT_GROSS_likes = [15000, 29000, 37000, 40000, 45000, 58000, 77000, 81000, 90000, 101000, 112000, 150000]; // 12
+  settings.condition_EXKLUDIERT_GROSS_likes = [15000, 99999999999]; // 1
+  settings.condition_INKLUDIERT_GROSS_likes = [15000, 29000, 37000, 45000, 60000, 77000, 89000, 112000, 150000]; // 9
   settings.condition_EXKLUDIERT_MITTEL_likes = [15000, 99999999999]; //1
-  settings.condition_INKLUDIERT_MITTEL_likes = [15000, 29000, 37000, 40000, 45000, 58000, 77000]; //7
+  settings.condition_INKLUDIERT_MITTEL_likes = [15000, 29000, 37000, 40000, 60000, 77000, 112000]; //7
 
   // **Others' likes**     
   // To keep the total distribution of "likes" constant across conditions, The "likes" received by one group member can be adjusted according to the participant's. By default, the other group member receives 9 "likes" in the participant-ostracism condition, 5 in the participant-inclusion condtion, and 1 in the participant-overinclusion condtion.
@@ -79,7 +79,7 @@ $(function() {
     // Usernames by which the participant will receive "likes"
 	// If group member names are changed, these should be changed accordingly.
   // STEFFI: wir können diese liste auch anpassen dass für jede gruppe andere namen snd - würd aber eher sagen ihr schaut dass ihr immer die gleichen test user überall habt und ergänzt nur mehr dann hamma weniger zum anpassen
-    settings.likes_by = ['Anna','Johannes','Marion','Peter','Matthias','Sandra','Rachid','Lisa','xxxx', 'xxxx']; 
+    settings.likes_by = ['Anna','Matthias','Marion','Johannes','Sandra','Rachid','Lisa','Peter', 'Anja', 'Daniela', 'Lukas', 'Timo']; 
   }
 
   // -------------------
@@ -296,7 +296,7 @@ $(function() {
   		var that = $(this);
   		var usernames = $(this).data('usernames').split(",");
   		var times = $(this).data('likes').split(",");
-     
+      debugger; 
   		for(var i=0; i<times.length; i++) 
   		{ 
   			times[i] = +times[i]; 
@@ -355,6 +355,8 @@ $(function() {
      var NAME = window.username;
      var GROUP = window.condition;
 
+     //alert(NAME);
+     //alert(GROUP);
 
      // make the postdata
      // var postData = '&ID='+ID+'&NAME='+NAME+'&PASSWORD='+PASSWORD+'&CREDITS'+CREDITS+'&EMAIL_ID'+EMAIL_ID+'&CREATED_ON'+CREATED_ON+'&MODIFIED_ON'+MODIFIED_ON;
@@ -432,10 +434,10 @@ $(function() {
 
   //TODO RANDOMIZE
   // steffi hier kannst du dir die test gruppe so einschalten wie du es gerade ausprobieren willst und anpassen möchtest
-  //condition="EXKLUDIERT_KLEIN";
+  condition="EXKLUDIERT_KLEIN";
   //condition="EXKLUDIERT_GROSS";
   //condition="EXKLUDIERT_MITTEL";
-  condition="INKLUDIERT_KLEIN";
+  //condition="INKLUDIERT_KLEIN";
   //condition="INKLUDIERT_GROSS";
   //condition="INKLUDIERT_MITTEL";
 

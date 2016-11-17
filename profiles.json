@@ -9,7 +9,7 @@ window.others_EXKULDIERT_KLEIN = {
         "avatar": "avatars/others/anna.png",
         "username": "Anna",
         "text": "Ich heiße Anna, bin 22 Jahre alt und studiere Medien und Kommunikationswissenschaften und Anglistik. Zu meinen Hobbies zählen fotografieren und lesen. Ich würde mich selbst als offenen Menschen beschreiben der sich immer freut neue Bekanntschaften zu machen.",
-        "likes": [18000, 30000, 90000] //3
+        "likes": [20000] //1
       },
       {
         "avatar": "avatars/others/marion.png",
@@ -21,7 +21,7 @@ window.others_EXKULDIERT_KLEIN = {
         "avatar": "avatars/others/matthias.png",
         "username": "Matthias",
         "text": "Hallo Leute. Ich heiße Matthias bin 25 Jahre alt und studiere Sport und Geschichte auf Lehramt. Ich komme ursprünglich aus Wien aber mache gerade mein Auslandssemester in Finnland. Ich liebe es zu Reisen und neue Länder, Kulturen und Menschen kennenzulernen. Daher bin ich für jedes Abenteuer zu haben.",
-        "likes": [20000, 50000, 110000] //3
+        "likes": [50000, 110000] //2
       },
 
     ]
@@ -34,7 +34,7 @@ window.others_EXKULDIERT_KLEIN = {
         "avatar": "avatars/others/anna.png",
         "username": "Anna",
         "text": "Ich heiße Anna, bin 22 Jahre alt und studiere Medien und Kommunikationswissenschaften und Anglistik. Zu meinen Hobbies zählen fotografieren und lesen. Ich würde mich selbst als offenen Menschen beschreiben der sich immer freut neue Bekanntschaften zu machen.",
-        "likes": [18000, 30000, 90000] //3
+        "likes": [20000] //1
       },
       {
         "avatar": "avatars/others/marion.png",
@@ -46,7 +46,7 @@ window.others_EXKULDIERT_KLEIN = {
         "avatar": "avatars/others/matthias.png",
         "username": "Matthias",
         "text": "Hallo Leute. Ich heiße Matthias bin 25 Jahre alt und studiere Sport und Geschichte auf Lehramt. Ich komme ursprünglich aus Wien aber mache gerade mein Auslandssemester in Finnland. Ich liebe es zu Reisen und neue Länder, Kulturen und Menschen kennenzulernen. Daher bin ich für jedes Abenteuer zu haben.",
-        "likes": [20000, 50000, 110000] //3
+        "likes": [50000, 110000] //2
       },
       
     ]
@@ -58,7 +58,7 @@ window.others_EXKULDIERT_KLEIN = {
         "avatar": "avatars/others/anna.png",
         "username": "Anna",
         "text": "Ich heiße Anna, bin 22 Jahre alt und studiere Medien und Kommunikationswissenschaften und Anglistik. Zu meinen Hobbies zählen fotografieren und lesen. Ich würde mich selbst als offenen Menschen beschreiben der sich immer freut neue Bekanntschaften zu machen.",
-        "likes": [18000, 30000, 90000] //3
+        "likes": [18000, 30000, 70000, 90000, 110000] //5
       },
       {
         "avatar": "avatars/others/marion.png",
@@ -70,13 +70,13 @@ window.others_EXKULDIERT_KLEIN = {
         "avatar": "avatars/others/johannes.png",
         "username": "Johannes",
         "text": "Ich heiße Johannes und bin 19 Jahre alt. Mein Leben dreht sich um Fußball. Schon seit ich 5 Jahre alt bin spiele ich und seit ich 10 bin, spiele ich in einem Verein. Ich trainiere jeden Tag um mir meinen Traum als Profifußballer irgendwann zu erfüllen.",
-        "likes": [20000, 60000, 80000] //3
+        "likes": [15000, 20000, 60000, 72000, 80000, 100000] //6
       },
       {
         "avatar": "avatars/others/matthias.png",
         "username": "Matthias",
         "text": "Hallo Leute. Ich heiße Matthias bin 25 Jahre alt und studiere Sport und Geschichte auf Lehramt. Ich komme ursprünglich aus Wien aber mache gerade mein Auslandssemester in Finnland. Ich liebe es zu Reisen und neue Länder, Kulturen und Menschen kennenzulernen. Daher bin ich für jedes Abenteuer zu haben.",
-        "likes": [30000, 50000, 60000, 110000] //4
+        "likes": [18000, 30000, 50000, 60000, 110000] //5
       },
       {
         "avatar": "avatars/others/sandra.png",
@@ -112,36 +112,36 @@ window.others_EXKULDIERT_KLEIN = {
         "avatar": "avatars/others/franz.png",
         "username": "Franz",
         "text": "Mein Name ist Franz, ich bin 50 Jahre alt. Ich bin Single und habe keine Kinder. Ich lebe in einer kleinen Gemeinde in Österreich und bin zurzeit leider arbeitslos.",
-        "likes": [20000, 25000, 30000] //3
+        "likes": [20000, 50000, 140000] //3
       },
       {
-        "avatar": "avatars/others/jane.png",
-        "username": "Jane",
-        "text": "Dear all, my name is Jane and I will soon have an important interview. This is all I can think about these days. I hope you're doing well",
+        "avatar": "avatars/others/anja.png",
+        "username": "Anja",
+        "text": "Hallo, Ich bin Anja, ich bin 23 Jahre und studiere Psychologie und gehe am liebsten mit meinen Freunden aus. Ein weiteres Hobby ist Lesen. Ich gehe nie ohne ein Buch aus dem Haus, da fehlt mir einfach was. Ich engagiere mich neben meinem Studium ehrenamtlich in einem Heim für kleine Kinder und diese Arbeite bedeutet mir sehr viel.",
         "likes": [15000, 20000, 50000, 55000, 70000, 85000, 99000, 110000, 150000] //9
       },
       {
-        "avatar": "avatars/others/lauren.png",
-        "username": "Lauren",
-        "text": "I’m Lauren, I love to hang out with friends and go shopping. Just doing some online studies here!",
+        "avatar": "avatars/others/timo.png",
+        "username": "Timo",
+        "text": "Hallo ich bin Timo, 26 Jahre alt. Vor 10 Jahren habe ich meine Ausbildung als IT-Fachmann abgeschlossen und arbeite sehr gerne in meinem Beruf. In der Freizeit spiele ich gerne Computerspiele, um mich auch mit anderen in der ganzen Welt zu unterhalten – das macht mir riesen Spaß!",
         "likes": [20000, 38000, 40000, 55000, 70000, 87000, 110000] //7
       },
           {
-        "avatar": "avatars/others/kim.png",
-        "username": "Ky",
-        "text": "Hey, guys. I'm 19, native Korean. I've been in America for about four years now.I consider myself pretty nice, though not a total angel. I just like being friendly to people I meet. In my spare time, I like making all kinds of friends, having conversations about whatever, looking at paintings, using makeup, reading, singing (show choir representtt!), making jewelry, and eating delicious food. Enjoy your day, stay out of trouble. <3",
+        "avatar": "avatars/others/luise.png",
+        "username": "Luise",
+        "text": "Guten Tag, ich bin Luise. Ich arbeite als Sekretärin bei einem Steuerberater und das schon seit einigen Jahren. In meiner Freizeit treffe ich mich gern mit meinen Freundinnen und dann gehen wir shoppen und trinken auch gern mal ein Gläschen Sekt. Meine Kinder sind aus dem Haus und da habe ich angefangen mehr Sport zu treiben und das tut mir einfach gut. Am liebsten gehe ich Walken im Park.",
         "likes": [30000, 35000, 50000, 88000, 110000, 115000, 120000, 140000] //8
       },
       {
-        "avatar": "avatars/others/arjen.png",
-        "username": "Arjen",
-        "text": "My name's Arjen, I study Artificial Intelligence. Also I like to use my free time to make all kinds of different things... I'm kind of a nerd too, I guess.",
+        "avatar": "avatars/others/lukas.png",
+        "username": "Lukas",
+        "text": "Hi ich bin Lukas und 30 Jahre alt Ich bin Lehrer an einer Mittelschule und lehre Mathematik und Politik. Mein Beruf macht mir prinzipiell viel Spaß, dennoch ist es oft anstrengend, die Kinder wieder ruhig zu bekommen und in Bezug auf die Eltern ist es oft schwer, deren Anforderungen zu erfüllen. In der Freizeit gehe ich gerne Klettern und Wandern, am liebsten in Kärnten.",
         "likes": [19000, 40000, 55000, 120000] //4
       },
       {
-        "avatar": "avatars/others/heather.png",
-        "username": "Heather",
-        "text": "Just now I'm finishing up my first year of a difficult science curriculum in university. I also work at a cosmetics counter as a part-time thing and earn some money online in my free time. I have a lot planned for my future, and it's really exciting. I want to grow up and be a doctor with a family of lots of little dogs. It'll be fantastic.",
+        "avatar": "avatars/others/daniela.png",
+        "username": "Daniela",
+        "text": "Hallo! Ich bin Daniela, ich studiere Wirtschaftswissenschaften und BWL. Ich wohne mit meinem Freund und unserer verrückten Katze in einer tollen Dachgeschosswohnung. Am liebsten schaue ich abends gemütlich Serien oder treffe mich mit meinen Freunden.",
         "likes": [30000, 50000, 80000, 88000, 120000, 125000, 150000] //7
       },
       {
@@ -151,21 +151,21 @@ window.others_EXKULDIERT_KLEIN = {
         "likes": [20000, 25000, 50000, 70000, 83000, 90000, 93000, 95000, 110000, 115000] //10
       },
       {
-        "avatar": "avatars/others/arjen.png",
-        "username": "Arjen",
-        "text": "My name's Arjen, I study Artificial Intelligence. Also I like to use my free time to make all kinds of different things... I'm kind of a nerd too, I guess.",
+        "avatar": "avatars/others/franzi.png",
+        "username": "Franzi",
+        "text": "Hi mein Name ist Franzi, ich bin 31 Jahre alt und arbeite als Sozialarbeiterin in einer Jugend-Tagesstätte. Hierbei bin ich oft mit den Einzelschicksalen vieler Jugendlicher konfrontiert, die sehr oft von ihren Eltern vernachlässigt oder misshandelt wurden und jetzt Probleme haben, ihren Abschluss zu machen bzw. eine Ausbildung o.Ä. anzufangen. Mein Beruf macht mir sehr viel Spaß, jedoch sind die Arbeitszeiten oft sehr anstrengend. In meiner Freizeit radle ich gerne und spiele gerne Volleyball.",
         "likes": [35000, 40000, 45000, 60000, 660000, 80000, 90000, 120000] //8
       },
       {
-        "avatar": "avatars/others/heather.png",
-        "username": "Heather",
-        "text": "Just now I'm finishing up my first year of a difficult science curriculum in university. I also work at a cosmetics counter as a part-time thing and earn some money online in my free time. I have a lot planned for my future, and it's really exciting. I want to grow up and be a doctor with a family of lots of little dogs. It'll be fantastic.",
+        "avatar": "avatars/others/michael.png",
+        "username": "Michael",
+        "text": "Hi, ich bin Michael, ich bin 25 Jahre alt und arbeite als Kfz-Mechaniker. Ich schaue gern Formel-1 und fahre natürlich selber gern mit meinem Wagen durch die Gegend. Am liebsten verbringe ich Zeit in der Werkstatt oder im Auto.",
         "likes": [40000, 50000, 80000, 88000, 120000] //5
       },
       {
-        "avatar": "avatars/others/jane.png",
-        "username": "Jane",
-        "text": "Dear all, my name is Jane and I will soon have an important interview. This is all I can think about these days. I hope you're doing well",
+        "avatar": "avatars/others/mike.png",
+        "username": "Mike",
+        "text": "Servus, ich bin Mike, gehe gern Rad fahren, Ski laufen, Wandern, Joggen….eigentlich alles was mit Sport zu tun hat. Ich poste fast täglich neue Touren oder Stunts von meinen Rad- oder Skitouren und freue mich, wenn die Leute meine Videos schauen.",
         "likes": [30000, 50000, 60000, 74000, 80000, 83000, 110000, 115000, 130000] //9
       },
     ]
@@ -177,7 +177,7 @@ window.others_EXKULDIERT_KLEIN = {
         "avatar": "avatars/others/anna.png",
         "username": "Anna",
         "text": "Ich heiße Anna, bin 22 Jahre alt und studiere Medien und Kommunikationswissenschaften und Anglistik. Zu meinen Hobbies zählen fotografieren und lesen. Ich würde mich selbst als offenen Menschen beschreiben der sich immer freut neue Bekanntschaften zu machen.",
-        "likes": [18000, 30000, 90000] //3
+        "likes": [18000, 30000, 70000, 90000, 110000] //5
       },
       {
         "avatar": "avatars/others/marion.png",
@@ -189,13 +189,13 @@ window.others_EXKULDIERT_KLEIN = {
         "avatar": "avatars/others/johannes.png",
         "username": "Johannes",
         "text": "Ich heiße Johannes und bin 19 Jahre alt. Mein Leben dreht sich um Fußball. Schon seit ich 5 Jahre alt bin spiele ich und seit ich 10 bin, spiele ich in einem Verein. Ich trainiere jeden Tag um mir meinen Traum als Profifußballer irgendwann zu erfüllen.",
-        "likes": [20000, 60000, 80000] //3
+        "likes": [15000, 20000, 60000, 72000, 80000, 100000] //6
       },
       {
         "avatar": "avatars/others/matthias.png",
         "username": "Matthias",
         "text": "Hallo Leute. Ich heiße Matthias bin 25 Jahre alt und studiere Sport und Geschichte auf Lehramt. Ich komme ursprünglich aus Wien aber mache gerade mein Auslandssemester in Finnland. Ich liebe es zu Reisen und neue Länder, Kulturen und Menschen kennenzulernen. Daher bin ich für jedes Abenteuer zu haben.",
-        "likes": [30000, 50000, 60000, 110000] //4
+        "likes": [18000, 30000, 50000, 60000, 110000] //5
       },
       {
         "avatar": "avatars/others/sandra.png",
@@ -231,61 +231,61 @@ window.others_EXKULDIERT_KLEIN = {
         "avatar": "avatars/others/franz.png",
         "username": "Franz",
         "text": "Mein Name ist Franz, ich bin 50 Jahre alt. Ich bin Single und habe keine Kinder. Ich lebe in einer kleinen Gemeinde in Österreich und bin zurzeit leider arbeitslos.",
-        "likes": [20000, 25000, 30000] //3
+        "likes": [20000, 50000, 140000] //3
       },
       {
-        "avatar": "avatars/others/jane.png",
-        "username": "Jane",
-        "text": "Dear all, my name is Jane and I will soon have an important interview. This is all I can think about these days. I hope you're doing well",
-        "likes": [10000, 20000, 50000, 55000, 70000, 85000, 99000, 110000, 150000] //9
+        "avatar": "avatars/others/anja.png",
+        "username": "Anja",
+        "text": "Hallo, Ich bin Anja, ich bin 23 Jahre und studiere Psychologie und gehe am liebsten mit meinen Freunden aus. Ein weiteres Hobby ist Lesen. Ich gehe nie ohne ein Buch aus dem Haus, da fehlt mir einfach was. Ich engagiere mich neben meinem Studium ehrenamtlich in einem Heim für kleine Kinder und diese Arbeite bedeutet mir sehr viel.",
+        "likes": [15000, 20000, 50000, 55000, 70000, 85000, 99000, 110000, 150000] //9
       },
       {
-        "avatar": "avatars/others/lauren.png",
-        "username": "Lauren",
-        "text": "I’m Lauren, I love to hang out with friends and go shopping. Just doing some online studies here!",
-        "likes": [12000, 38000, 40000, 55000, 70000, 87000, 110000] //7
+        "avatar": "avatars/others/timo.png",
+        "username": "Timo",
+        "text": "Hallo ich bin Timo, 26 Jahre alt. Vor 10 Jahren habe ich meine Ausbildung als IT-Fachmann abgeschlossen und arbeite sehr gerne in meinem Beruf. In der Freizeit spiele ich gerne Computerspiele, um mich auch mit anderen in der ganzen Welt zu unterhalten – das macht mir riesen Spaß!",
+        "likes": [20000, 38000, 40000, 55000, 70000, 87000, 110000] //7
       },
           {
-        "avatar": "avatars/others/kim.png",
-        "username": "Ky",
-        "text": "Hey, guys. I'm 19, native Korean. I've been in America for about four years now.I consider myself pretty nice, though not a total angel. I just like being friendly to people I meet. In my spare time, I like making all kinds of friends, having conversations about whatever, looking at paintings, using makeup, reading, singing (show choir representtt!), making jewelry, and eating delicious food. Enjoy your day, stay out of trouble. <3",
-        "likes": [10000, 30000, 50000, 88000, 11000, 11500, 120000, 140000] //8
+        "avatar": "avatars/others/luise.png",
+        "username": "Luise",
+        "text": "Guten Tag, ich bin Luise. Ich arbeite als Sekretärin bei einem Steuerberater und das schon seit einigen Jahren. In meiner Freizeit treffe ich mich gern mit meinen Freundinnen und dann gehen wir shoppen und trinken auch gern mal ein Gläschen Sekt. Meine Kinder sind aus dem Haus und da habe ich angefangen mehr Sport zu treiben und das tut mir einfach gut. Am liebsten gehe ich Walken im Park.",
+        "likes": [30000, 35000, 50000, 88000, 110000, 115000, 120000, 140000] //8
       },
       {
-        "avatar": "avatars/others/arjen.png",
-        "username": "Arjen",
-        "text": "My name's Arjen, I study Artificial Intelligence. Also I like to use my free time to make all kinds of different things... I'm kind of a nerd too, I guess.",
-        "likes": [12000, 40000, 55000, 120000] //4
+        "avatar": "avatars/others/lukas.png",
+        "username": "Lukas",
+        "text": "Hi ich bin Lukas und 30 Jahre alt Ich bin Lehrer an einer Mittelschule und lehre Mathematik und Politik. Mein Beruf macht mir prinzipiell viel Spaß, dennoch ist es oft anstrengend, die Kinder wieder ruhig zu bekommen und in Bezug auf die Eltern ist es oft schwer, deren Anforderungen zu erfüllen. In der Freizeit gehe ich gerne Klettern und Wandern, am liebsten in Kärnten.",
+        "likes": [19000, 40000, 55000, 120000] //4
       },
       {
-        "avatar": "avatars/others/heather.png",
-        "username": "Heather",
-        "text": "Just now I'm finishing up my first year of a difficult science curriculum in university. I also work at a cosmetics counter as a part-time thing and earn some money online in my free time. I have a lot planned for my future, and it's really exciting. I want to grow up and be a doctor with a family of lots of little dogs. It'll be fantastic.",
-        "likes": [13000, 50000, 80000, 88000, 120000, 1250000, 150000] //7
+        "avatar": "avatars/others/daniela.png",
+        "username": "Daniela",
+        "text": "Hallo! Ich bin Daniela, ich studiere Wirtschaftswissenschaften und BWL. Ich wohne mit meinem Freund und unserer verrückten Katze in einer tollen Dachgeschosswohnung. Am liebsten schaue ich abends gemütlich Serien oder treffe mich mit meinen Freunden.",
+        "likes": [30000, 50000, 80000, 88000, 120000, 125000, 150000] //7
       },
       {
-        "avatar": "avatars/others/jane.png",
-        "username": "Jane",
-        "text": "Dear all, my name is Jane and I will soon have an important interview. This is all I can think about these days. I hope you're doing well",
-        "likes": [10000, 25000, 50000, 70000, 83000, 90000, 93000, 95000, 110000, 115000] //10
+        "avatar": "avatars/others/peter.png",
+        "username": "Peter",
+        "text": "Hallo ich heiße Peter und bin 40 Jahre alt. Ich bin verheiratet aber habe keine Kinder. Ich bin Mechaniker. Seit einigen Jahren mach ich sehr viel Sport, denn mein Ziel ist es bei einem Ironman mitzumachen.",
+        "likes": [20000, 25000, 50000, 70000, 83000, 90000, 93000, 95000, 110000, 115000] //10
       },
       {
-        "avatar": "avatars/others/arjen.png",
-        "username": "Arjen",
-        "text": "My name's Arjen, I study Artificial Intelligence. Also I like to use my free time to make all kinds of different things... I'm kind of a nerd too, I guess.",
-        "likes": [12000, 40000, 45000, 60000, 660000, 80000, 90000, 120000] //8
+        "avatar": "avatars/others/franzi.png",
+        "username": "Franzi",
+        "text": "Hi mein Name ist Franzi, ich bin 31 Jahre alt und arbeite als Sozialarbeiterin in einer Jugend-Tagesstätte. Hierbei bin ich oft mit den Einzelschicksalen vieler Jugendlicher konfrontiert, die sehr oft von ihren Eltern vernachlässigt oder misshandelt wurden und jetzt Probleme haben, ihren Abschluss zu machen bzw. eine Ausbildung o.Ä. anzufangen. Mein Beruf macht mir sehr viel Spaß, jedoch sind die Arbeitszeiten oft sehr anstrengend. In meiner Freizeit radle ich gerne und spiele gerne Volleyball.",
+        "likes": [35000, 40000, 45000, 60000, 660000, 80000, 90000, 120000] //8
       },
       {
-        "avatar": "avatars/others/heather.png",
-        "username": "Heather",
-        "text": "Just now I'm finishing up my first year of a difficult science curriculum in university. I also work at a cosmetics counter as a part-time thing and earn some money online in my free time. I have a lot planned for my future, and it's really exciting. I want to grow up and be a doctor with a family of lots of little dogs. It'll be fantastic.",
-        "likes": [13000, 50000, 80000, 88000, 120000] //5
+        "avatar": "avatars/others/michael.png",
+        "username": "Michael",
+        "text": "Hi, ich bin Michael, ich bin 25 Jahre alt und arbeite als Kfz-Mechaniker. Ich schaue gern Formel-1 und fahre natürlich selber gern mit meinem Wagen durch die Gegend. Am liebsten verbringe ich Zeit in der Werkstatt oder im Auto.",
+        "likes": [40000, 50000, 80000, 88000, 120000] //5
       },
       {
-        "avatar": "avatars/others/jane.png",
-        "username": "Jane",
-        "text": "Dear all, my name is Jane and I will soon have an important interview. This is all I can think about these days. I hope you're doing well",
-        "likes": [10000, 50000, 60000, 74000, 80000, 83000, 110000, 115000, 130000] //9
+        "avatar": "avatars/others/mike.png",
+        "username": "Mike",
+        "text": "Servus, ich bin Mike, gehe gern Rad fahren, Ski laufen, Wandern, Joggen….eigentlich alles was mit Sport zu tun hat. Ich poste fast täglich neue Touren oder Stunts von meinen Rad- oder Skitouren und freue mich, wenn die Leute meine Videos schauen.",
+        "likes": [30000, 50000, 60000, 74000, 80000, 83000, 110000, 115000, 130000] //9
       },
 
     ]
@@ -297,7 +297,7 @@ window.others_EXKULDIERT_KLEIN = {
         "avatar": "avatars/others/anna.png",
         "username": "Anna",
         "text": "Ich heiße Anna, bin 22 Jahre alt und studiere Medien und Kommunikationswissenschaften und Anglistik. Zu meinen Hobbies zählen fotografieren und lesen. Ich würde mich selbst als offenen Menschen beschreiben der sich immer freut neue Bekanntschaften zu machen.",
-        "likes": [18000, 30000, 90000] //3
+        "likes": [18000, 30000, 70000, 90000, 110000] //5
       },
       {
         "avatar": "avatars/others/marion.png",
@@ -309,19 +309,19 @@ window.others_EXKULDIERT_KLEIN = {
         "avatar": "avatars/others/johannes.png",
         "username": "Johannes",
         "text": "Ich heiße Johannes und bin 19 Jahre alt. Mein Leben dreht sich um Fußball. Schon seit ich 5 Jahre alt bin spiele ich und seit ich 10 bin, spiele ich in einem Verein. Ich trainiere jeden Tag um mir meinen Traum als Profifußballer irgendwann zu erfüllen.",
-        "likes": [20000, 60000, 80000] //3
+        "likes": [15000, 20000, 60000, 72000, 80000, 100000] //6
       },
       {
         "avatar": "avatars/others/matthias.png",
         "username": "Matthias",
         "text": "Hallo Leute. Ich heiße Matthias bin 25 Jahre alt und studiere Sport und Geschichte auf Lehramt. Ich komme ursprünglich aus Wien aber mache gerade mein Auslandssemester in Finnland. Ich liebe es zu Reisen und neue Länder, Kulturen und Menschen kennenzulernen. Daher bin ich für jedes Abenteuer zu haben.",
-        "likes": [30000, 50000, 60000, 110000] //4
+        "likes": [18000, 24000, 30000, 50000, 60000, 90000, 110000, 155000] //8
       },
       {
         "avatar": "avatars/others/sandra.png",
         "username": "Sandra",
         "text": "Mein Name ist Sandra. Ich bin 43 Jahre alt und bin Volkschullehrerin. Ich bin verheiratet und habe zwei Kinder im Alter von 7 und 10 Jahren. In meiner Freizeit gehe ich oft spazieren und wandern. Ich liebe die Natur und erfreue mich gerne an ihrer Schönheit.",
-        "likes": [20000, 25000, 40000, 450000, 88000, 90000, 100000, 120000, 150000, 155000] //10
+        "likes": [20000, 40000, 88000, 100000, 120000, 155000] //6
       },
     {
         "avatar": "avatars/others/rachid.png",
@@ -333,7 +333,7 @@ window.others_EXKULDIERT_KLEIN = {
         "avatar": "avatars/others/manuel.png",
         "username": "Manuel",
         "text": "Ich heiße Manuel und bin Komiker. Ich arbeite viel aber liebe meinen Job und Lachen hält ja bekanntlich jung. Ich bin selbständig und habe viele Auftritte in kleinen Lokalitäten. Ich würde mich selbst als kreativ, freundlich, offen und natürlich humorvoll beschreiben.",
-        "likes": [15000, 18000, 38000, 40000, 50000, 55000, 70000, 85000, 88000, 90000, 110000, 150000] //12
+        "likes": [15000, 18000, 38000, 40000, 50000, 58000, 70000, 88000, 110000, 150000] //10
       },
           {
         "avatar": "avatars/others/julia.png",
@@ -351,15 +351,14 @@ window.others_EXKULDIERT_KLEIN = {
         "avatar": "avatars/others/franz.png",
         "username": "Franz",
         "text": "Mein Name ist Franz, ich bin 50 Jahre alt. Ich bin Single und habe keine Kinder. Ich lebe in einer kleinen Gemeinde in Österreich und bin zurzeit leider arbeitslos.",
-        "likes": [20000, 25000, 30000] //3
+        "likes": [20000, 50000, 140000] //3
       },
-      {
-        "avatar": "avatars/others/jane.png",
-        "username": "Jane",
-        "text": "Dear all, my name is Jane and I will soon have an important interview. This is all I can think about these days. I hope you're doing well",
-        "likes": [10000, 20000, 50000, 55000, 70000, 85000, 99000, 110000, 150000] //9
+{
+        "avatar": "avatars/others/anja.png",
+        "username": "Anja",
+        "text": "Hallo, Ich bin Anja, ich bin 23 Jahre und studiere Psychologie und gehe am liebsten mit meinen Freunden aus. Ein weiteres Hobby ist Lesen. Ich gehe nie ohne ein Buch aus dem Haus, da fehlt mir einfach was. Ich engagiere mich neben meinem Studium ehrenamtlich in einem Heim für kleine Kinder und diese Arbeite bedeutet mir sehr viel.",
+        "likes": [15000, 20000, 50000, 70000, 85000, 110000, 150000] //7
       },
-      
 
     ]
   };
@@ -370,7 +369,7 @@ window.others_EXKULDIERT_KLEIN = {
         "avatar": "avatars/others/anna.png",
         "username": "Anna",
         "text": "Ich heiße Anna, bin 22 Jahre alt und studiere Medien und Kommunikationswissenschaften und Anglistik. Zu meinen Hobbies zählen fotografieren und lesen. Ich würde mich selbst als offenen Menschen beschreiben der sich immer freut neue Bekanntschaften zu machen.",
-        "likes": [18000, 30000, 90000] //3
+        "likes": [18000, 30000, 70000, 90000, 110000] //5
       },
       {
         "avatar": "avatars/others/marion.png",
@@ -382,19 +381,19 @@ window.others_EXKULDIERT_KLEIN = {
         "avatar": "avatars/others/johannes.png",
         "username": "Johannes",
         "text": "Ich heiße Johannes und bin 19 Jahre alt. Mein Leben dreht sich um Fußball. Schon seit ich 5 Jahre alt bin spiele ich und seit ich 10 bin, spiele ich in einem Verein. Ich trainiere jeden Tag um mir meinen Traum als Profifußballer irgendwann zu erfüllen.",
-        "likes": [20000, 60000, 80000] //3
+        "likes": [15000, 20000, 60000, 72000, 80000, 100000] //6
       },
       {
         "avatar": "avatars/others/matthias.png",
         "username": "Matthias",
         "text": "Hallo Leute. Ich heiße Matthias bin 25 Jahre alt und studiere Sport und Geschichte auf Lehramt. Ich komme ursprünglich aus Wien aber mache gerade mein Auslandssemester in Finnland. Ich liebe es zu Reisen und neue Länder, Kulturen und Menschen kennenzulernen. Daher bin ich für jedes Abenteuer zu haben.",
-        "likes": [30000, 50000, 60000, 110000] //4
+        "likes": [18000, 24000, 30000, 50000, 60000, 90000, 110000, 155000] //8
       },
       {
         "avatar": "avatars/others/sandra.png",
         "username": "Sandra",
         "text": "Mein Name ist Sandra. Ich bin 43 Jahre alt und bin Volkschullehrerin. Ich bin verheiratet und habe zwei Kinder im Alter von 7 und 10 Jahren. In meiner Freizeit gehe ich oft spazieren und wandern. Ich liebe die Natur und erfreue mich gerne an ihrer Schönheit.",
-        "likes": [20000, 25000, 40000, 450000, 88000, 90000, 100000, 120000, 150000, 155000] //10
+        "likes": [20000, 40000, 88000, 100000, 120000, 155000] //6
       },
     {
         "avatar": "avatars/others/rachid.png",
@@ -406,7 +405,7 @@ window.others_EXKULDIERT_KLEIN = {
         "avatar": "avatars/others/manuel.png",
         "username": "Manuel",
         "text": "Ich heiße Manuel und bin Komiker. Ich arbeite viel aber liebe meinen Job und Lachen hält ja bekanntlich jung. Ich bin selbständig und habe viele Auftritte in kleinen Lokalitäten. Ich würde mich selbst als kreativ, freundlich, offen und natürlich humorvoll beschreiben.",
-        "likes": [15000, 18000, 38000, 40000, 50000, 55000, 70000, 85000, 88000, 90000, 110000, 150000] //12
+        "likes": [15000, 18000, 38000, 40000, 50000, 58000, 70000, 88000, 110000, 150000] //10
       },
           {
         "avatar": "avatars/others/julia.png",
@@ -424,13 +423,13 @@ window.others_EXKULDIERT_KLEIN = {
         "avatar": "avatars/others/franz.png",
         "username": "Franz",
         "text": "Mein Name ist Franz, ich bin 50 Jahre alt. Ich bin Single und habe keine Kinder. Ich lebe in einer kleinen Gemeinde in Österreich und bin zurzeit leider arbeitslos.",
-        "likes": [20000, 25000, 30000] //3
+        "likes": [20000, 50000, 140000] //3
       },
-      {
-        "avatar": "avatars/others/jane.png",
-        "username": "Jane",
-        "text": "Dear all, my name is Jane and I will soon have an important interview. This is all I can think about these days. I hope you're doing well",
-        "likes": [10000, 20000, 50000, 55000, 70000, 85000, 99000, 110000, 150000] //9
+{
+        "avatar": "avatars/others/anja.png",
+        "username": "Anja",
+        "text": "Hallo, Ich bin Anja, ich bin 23 Jahre und studiere Psychologie und gehe am liebsten mit meinen Freunden aus. Ein weiteres Hobby ist Lesen. Ich gehe nie ohne ein Buch aus dem Haus, da fehlt mir einfach was. Ich engagiere mich neben meinem Studium ehrenamtlich in einem Heim für kleine Kinder und diese Arbeite bedeutet mir sehr viel.",
+        "likes": [15000, 20000, 50000, 70000, 85000, 110000, 150000] //7
       },
       
     ]
